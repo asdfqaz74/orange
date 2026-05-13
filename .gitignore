@@ -1,0 +1,65 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.local
+*.key
+*.pem
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+vendor/
+
+# JavaScript / TypeScript build output
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+coverage/
+*.tsbuildinfo
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Generic caches and temporary files
+.cache/
+.tmp/
+tmp/
+temp/
+*.tmp
+
+# OMX runtime-local state
+.omx/logs/
+.omx/state/
+.omx/metrics.json
