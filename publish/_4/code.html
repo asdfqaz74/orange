@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jeju Damgyul - Shopping Cart</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#324e2a",
+                    "surface-container-high": "#eae8e7",
+                    "on-primary-fixed-variant": "#6e3900",
+                    "background": "#fbf9f8",
+                    "on-tertiary-container": "#3e3f39",
+                    "surface-tint": "#904d00",
+                    "surface-container-low": "#f5f3f3",
+                    "secondary-container": "#caecbc",
+                    "tertiary": "#5f5f59",
+                    "inverse-on-surface": "#f2f0f0",
+                    "secondary-fixed": "#caecbc",
+                    "secondary-fixed-dim": "#afd0a1",
+                    "on-tertiary-fixed": "#1b1c17",
+                    "primary-fixed-dim": "#ffb77d",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#1b1c1c",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#303030",
+                    "outline": "#897362",
+                    "inverse-primary": "#ffb77d",
+                    "secondary": "#496640",
+                    "on-secondary-fixed": "#062104",
+                    "primary-fixed": "#ffdcc3",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#564334",
+                    "surface-variant": "#e4e2e2",
+                    "surface-dim": "#dbd9d9",
+                    "on-primary-fixed": "#2f1500",
+                    "on-tertiary-fixed-variant": "#474742",
+                    "surface-container": "#efeded",
+                    "on-primary-container": "#623200",
+                    "surface-bright": "#fbf9f8",
+                    "tertiary-fixed": "#e4e3db",
+                    "on-background": "#1b1c1c",
+                    "on-secondary-container": "#4f6c45",
+                    "outline-variant": "#ddc1ae",
+                    "primary-container": "#ff8c00",
+                    "primary": "#904d00",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#c8c7bf",
+                    "surface": "#fbf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#e4e2e2",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#abaaa3",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "stack-lg": "40px",
+                    "stack-sm": "12px",
+                    "gutter-mobile": "16px",
+                    "stack-md": "24px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "body-sm": ["Be Vietnam Pro"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "label-sm": ["Be Vietnam Pro"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                    "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "label-sm": ["12px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+                    "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                    "label-md": ["14px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col pb-safe lg:pb-0">
+<!-- TopAppBar (from JSON) -->
+<header class="sticky top-0 z-50 w-full bg-surface shadow-sm opacity-90 transition-transform duration-150">
+<div class="flex justify-between items-center px-margin-mobile py-base w-full max-w-7xl mx-auto">
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low transition-colors duration-200 text-on-surface-variant">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">Jeju Damgyul</h1>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low transition-colors duration-200 text-primary font-bold active:scale-95">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile py-stack-md pb-32 lg:pb-stack-md">
+<div class="mb-stack-md flex justify-between items-end border-b border-surface-variant pb-4">
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Your Cart</h2>
+<span class="font-body-md text-body-md text-on-surface-variant">2 Items</span>
+</div>
+<!-- Asymmetric Grid Layout for Cart -->
+<div class="lg:grid lg:grid-cols-12 lg:gap-8 items-start">
+<!-- Left Column: Cart Items -->
+<div class="lg:col-span-8 flex flex-col gap-4">
+<!-- Cart Item 1 -->
+<div class="flex flex-col sm:flex-row gap-gutter-mobile p-4 bg-surface-container-lowest rounded-xl border border-surface-variant shadow-[0_4px_15px_rgba(0,0,0,0.03)] relative transition-all hover:shadow-[0_8px_20px_rgba(0,0,0,0.06)]">
+<button class="absolute top-4 right-4 text-outline-variant hover:text-error transition-colors p-1 rounded-full hover:bg-error-container/20">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<div class="w-full sm:w-32 h-32 sm:h-auto shrink-0 bg-surface-container rounded-lg overflow-hidden flex items-center justify-center">
+<img alt="Jeju Mandarins" class="w-full h-full object-cover" data-alt="A beautifully styled, top-down shot of vibrant orange Jeju sweet mandarins arranged in a rustic wooden crate. The lighting is soft, warm, and natural, highlighting the slightly dimpled texture of the citrus peels and a few fresh green leaves still attached to the stems. The setting implies a premium, farm-to-table boutique orchard experience with a clean, light-mode background that makes the tangerine colors pop vividly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHGYozYXxd3KZZ5FlnwhW92F17fVsUR85CNPM-WDWLVxI55e60x0Pb2hX60KWvkuSJ2dsp1rYsehwjv5ehu6lXtLTMyEZximw8ubMgQiDfIVCTzzIdJkJ9Ii66cl7JhPzGA5criOXgJddv8ISurSng7WCPxC8JSBzGp7WGrpJgSvK0zx5Rd0lMo4ymypnwMcixmFn_vJkjMpDUqO9ccs1u_yCJ1SG5GgwbOPi5kaIFbTOkJ9ZYnBue4eXXJOyoJLwFkRjTM--HpTUb"/>
+</div>
+<div class="flex flex-col flex-grow justify-between py-1">
+<div class="pr-8">
+<span class="inline-block px-2 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-label-sm rounded-full mb-2">Best Seller</span>
+<h3 class="font-headline-md text-headline-md text-on-surface leading-tight mb-1">Jeju Premium Sweet Mandarins</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">5kg Signature Box • Standard Harvest</p>
+</div>
+<div class="flex flex-wrap items-end justify-between mt-4 gap-4 sm:gap-2">
+<div class="font-headline-lg text-headline-lg text-primary">₩45,000</div>
+<!-- Quantity Control -->
+<div class="flex items-center bg-surface-container rounded-full p-1 border border-surface-variant">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<span class="font-label-md text-label-md w-8 text-center text-on-surface">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="flex flex-col sm:flex-row gap-gutter-mobile p-4 bg-surface-container-lowest rounded-xl border border-surface-variant shadow-[0_4px_15px_rgba(0,0,0,0.03)] relative transition-all hover:shadow-[0_8px_20px_rgba(0,0,0,0.06)]">
+<button class="absolute top-4 right-4 text-outline-variant hover:text-error transition-colors p-1 rounded-full hover:bg-error-container/20">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<div class="w-full sm:w-32 h-32 sm:h-auto shrink-0 bg-surface-container rounded-lg overflow-hidden flex items-center justify-center">
+<img alt="Hallabong" class="w-full h-full object-cover" data-alt="A close-up, premium product photography shot of three large, perfectly shaped Hallabong oranges with their distinctive top bumps. They are presented on a clean, light cream-colored stone surface. Soft ambient shadows provide depth, enhancing the modern tactile UI aesthetic of the brand. The warm lighting emphasizes the rich, saturated tangerine hue of the fruit, conveying a sense of fresh, organic luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3YIbcV9b4sa-NXC3iX9l0OgvStKwt_on_GDRO_ORVlvt9PcnLtrJkWIZvIOclK0hGm_xGqziOf2S3iDdme3QV3ASm5M-5IrNcT48yd2oH8R-c5Iw5YOdkPRbCOJD55VG_o9u1DZoaCoFYlyHVBxSfsUB31v-KBYbG3l2vlxzLilY7I2KOIvFYSjntnYx6alp28hGTd0dTPM7eP1shojQnoFOae9khWBkXj_WuDfQhz1TPMjBeqJcWyvSiS1DlOpw-g-enrsNxAGwv"/>
+</div>
+<div class="flex flex-col flex-grow justify-between py-1">
+<div class="pr-8">
+<span class="inline-block px-2 py-0.5 bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm rounded-full mb-2">Organic</span>
+<h3 class="font-headline-md text-headline-md text-on-surface leading-tight mb-1">Organic Hallabong Set</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3-Pack • Gift Wrapping Included</p>
+</div>
+<div class="flex flex-wrap items-end justify-between mt-4 gap-4 sm:gap-2">
+<div class="font-headline-lg text-headline-lg text-primary">₩60,000</div>
+<!-- Quantity Control -->
+<div class="flex items-center bg-surface-container rounded-full p-1 border border-surface-variant">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg">remove</span>
+</button>
+<span class="font-label-md text-label-md w-8 text-center text-on-surface">2</span>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-highest rounded-full transition-colors">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State (Hidden by default, shown for structure context) -->
+<!--
+                <div class="flex flex-col items-center justify-center py-stack-lg px-4 text-center bg-surface-container-lowest border border-surface-variant border-dashed rounded-xl mt-4">
+                    <div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-4 text-outline">
+                        <span class="material-symbols-outlined text-3xl">shopping_basket</span>
+                    </div>
+                    <p class="font-body-lg text-body-lg text-on-surface mb-2">담은 상품이 없습니다.</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6">제주의 신선함을 구경해보세요!</p>
+                    <button class="bg-surface text-primary border border-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors">
+                        Browse Orchard
+                    </button>
+                </div>
+                -->
+</div>
+<!-- Right Column: Order Summary (Sticky on Desktop) -->
+<div class="lg:col-span-4 mt-stack-lg lg:mt-0 relative">
+<div class="lg:sticky lg:top-[100px] bg-surface-container-lowest rounded-xl p-6 border border-surface-variant shadow-[0_4px_20px_rgba(0,0,0,0.04)]">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">receipt_long</span>
+                        Order Summary
+                    </h3>
+<div class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant mb-6">
+<div class="flex justify-between items-center">
+<span>Subtotal (2 items)</span>
+<span class="font-medium text-on-surface">₩105,000</span>
+</div>
+<div class="flex justify-between items-center">
+<span>Farm-Direct Shipping</span>
+<span class="font-medium text-on-surface">₩4,000</span>
+</div>
+<div class="flex justify-between items-center text-secondary">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">local_offer</span>
+                                Seasonal Discount
+                            </span>
+<span class="font-medium">-₩5,000</span>
+</div>
+</div>
+<div class="h-px bg-surface-variant w-full mb-6"></div>
+<div class="flex justify-between items-end mb-8">
+<span class="font-headline-md text-headline-md text-on-surface">Total</span>
+<span class="font-headline-xl text-headline-xl text-primary leading-none">₩104,000</span>
+</div>
+<!-- Trust Badges -->
+<div class="flex flex-col gap-2 mb-6">
+<div class="flex items-center gap-2 bg-surface p-2 rounded-lg border border-surface-variant">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px]">eco</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Direct from Jeju Farmers</span>
+</div>
+<div class="flex items-center gap-2 bg-surface p-2 rounded-lg border border-surface-variant">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ships within 24 hours of harvest</span>
+</div>
+</div>
+<!-- Desktop CTA (Hidden on mobile, uses fixed bottom on mobile) -->
+<button class="hidden lg:flex w-full bg-primary text-on-primary font-headline-md text-headline-md rounded-xl py-4 items-center justify-center gap-2 hover:bg-surface-tint transition-all shadow-[0_4px_12px_rgba(144,77,0,0.2)]">
+                        Checkout Now
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Mobile Fixed Bottom CTA (Hidden on lg screens where side summary takes over) -->
+<div class="lg:hidden fixed bottom-0 left-0 w-full bg-surface-container-lowest px-margin-mobile py-4 border-t border-outline-variant/20 shadow-[0_-8px_20px_rgba(0,0,0,0.08)] z-50 rounded-t-xl">
+<button class="w-full bg-primary text-on-primary font-headline-md text-headline-md rounded-xl py-4 flex items-center justify-center gap-2 hover:bg-surface-tint transition-colors active:scale-[0.98]">
+            Order Now - ₩104,000
+        </button>
+</div>
+</body></html>

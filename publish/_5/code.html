@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - Jeju Damgyul</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#324e2a",
+                        "surface-container-high": "#eae8e7",
+                        "on-primary-fixed-variant": "#6e3900",
+                        "background": "#fbf9f8",
+                        "on-tertiary-container": "#3e3f39",
+                        "surface-tint": "#904d00",
+                        "surface-container-low": "#f5f3f3",
+                        "secondary-container": "#caecbc",
+                        "tertiary": "#5f5f59",
+                        "inverse-on-surface": "#f2f0f0",
+                        "secondary-fixed": "#caecbc",
+                        "secondary-fixed-dim": "#afd0a1",
+                        "on-tertiary-fixed": "#1b1c17",
+                        "primary-fixed-dim": "#ffb77d",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1b1c1c",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#303030",
+                        "outline": "#897362",
+                        "inverse-primary": "#ffb77d",
+                        "secondary": "#496640",
+                        "on-secondary-fixed": "#062104",
+                        "primary-fixed": "#ffdcc3",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#564334",
+                        "surface-variant": "#e4e2e2",
+                        "surface-dim": "#dbd9d9",
+                        "on-primary-fixed": "#2f1500",
+                        "on-tertiary-fixed-variant": "#474742",
+                        "surface-container": "#efeded",
+                        "on-primary-container": "#623200",
+                        "surface-bright": "#fbf9f8",
+                        "tertiary-fixed": "#e4e3db",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-container": "#4f6c45",
+                        "outline-variant": "#ddc1ae",
+                        "primary-container": "#ff8c00",
+                        "primary": "#904d00",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#c8c7bf",
+                        "surface": "#fbf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e4e2e2",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#abaaa3",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "stack-lg": "40px",
+                        "stack-sm": "12px",
+                        "gutter-mobile": "16px",
+                        "stack-md": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "body-sm": ["Be Vietnam Pro"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "label-sm": ["Be Vietnam Pro"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopAppBar (Suppressed navigation, transactional focus) -->
+<header class="bg-surface shadow-sm docked full-width top-0 z-50">
+<div class="flex justify-between items-center px-margin-mobile py-base w-full max-w-7xl mx-auto">
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">Checkout</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow px-margin-mobile py-stack-md max-w-3xl mx-auto w-full pb-32">
+<!-- Order Summary Bento -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] p-stack-sm mb-stack-md border border-surface-variant">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_basket">shopping_basket</span>
+                Order Summary
+            </h2>
+<div class="flex items-center gap-4 py-stack-sm border-b border-surface-variant">
+<img alt="Jeju Mandarin" class="w-20 h-20 object-cover rounded-lg" data-alt="A close-up, high-quality photograph of fresh, vibrant Jeju mandarin oranges resting in a woven wooden basket. The lighting is soft and natural, emphasizing the bright tangerine orange peel and the fresh green leaves still attached. The background is a slightly blurred, warm ivory setting, evoking a rustic, farm-to-table boutique aesthetic. The mood is fresh, organic, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl_Q2HYDvv3I9ons2iZWU9xHiWZIXLWIs4M-JfL_DdeBtQBMmnotue8PbtbGoBBkI746MPPN3sSYjP9xXnSQMBgq-sFJAdZUi7XSaFPaDmw5MUzg3CISYoXxfo82Aufoqr6-KeKLkHVoWtkZbUDXuix0H5Y7idcEExczDTGXzGPY8s0L60LL5O-8_6Z2Yo5jsOCqYEXb8NRCnIVxv1Hr0Oh41codMqQr5BH_MnVMwQndk7qsHRgiYoilLFh3wpofzxzohCqC0rnBWD"/>
+<div class="flex-grow">
+<h3 class="font-label-md text-label-md text-on-surface">Premium Jeju Hallabong</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3kg Box</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface">₩45,000</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Qty: 1</p>
+</div>
+</div>
+<div class="pt-stack-sm space-y-2">
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Subtotal</span>
+<span>₩45,000</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Shipping</span>
+<span>Free</span>
+</div>
+<div class="flex justify-between font-headline-md text-headline-md text-primary pt-2">
+<span>Total</span>
+<span>₩45,000</span>
+</div>
+</div>
+</section>
+<!-- Shipping Information Form -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] p-stack-sm mb-stack-md border border-surface-variant">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="local_shipping">local_shipping</span>
+                Shipping Details
+            </h2>
+<form class="space-y-4">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="recipientName">Recipient Name</label>
+<input class="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="recipientName" placeholder="Enter full name" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="phoneNumber">Phone Number</label>
+<input class="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="phoneNumber" placeholder="010-XXXX-XXXX" type="tel"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="address">Shipping Address</label>
+<textarea class="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none" id="address" placeholder="Enter full address" rows="2"></textarea>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="deliveryRequest">Delivery Request (Optional)</label>
+<input class="w-full bg-background border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="deliveryRequest" placeholder="e.g., Leave at the door" type="text"/>
+</div>
+</form>
+</section>
+<!-- Payment Method Selection -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.04)] p-stack-sm mb-stack-md border border-surface-variant">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="payment">payment</span>
+                Payment Method
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<label class="cursor-pointer relative">
+<input checked="" class="peer sr-only" name="paymentMethod" type="radio" value="card"/>
+<div class="p-4 rounded-lg border-2 border-surface-variant peer-checked:border-primary peer-checked:bg-primary-fixed bg-background transition-all flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant peer-checked:text-primary" data-icon="credit_card">credit_card</span>
+<span class="font-label-md text-label-md text-on-surface peer-checked:text-primary">Credit Card</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="paymentMethod" type="radio" value="bank"/>
+<div class="p-4 rounded-lg border-2 border-surface-variant peer-checked:border-primary peer-checked:bg-primary-fixed bg-background transition-all flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant peer-checked:text-primary" data-icon="account_balance">account_balance</span>
+<span class="font-label-md text-label-md text-on-surface peer-checked:text-primary">Bank Transfer</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="paymentMethod" type="radio" value="simple"/>
+<div class="p-4 rounded-lg border-2 border-surface-variant peer-checked:border-primary peer-checked:bg-primary-fixed bg-background transition-all flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant peer-checked:text-primary" data-icon="tap_and_play">tap_and_play</span>
+<span class="font-label-md text-label-md text-on-surface peer-checked:text-primary">Simple Pay</span>
+</div>
+</label>
+</div>
+</section>
+</main>
+<!-- Fixed Bottom Payment Button -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container-lowest border-t border-surface-variant shadow-[0_-4px_20px_rgba(0,0,0,0.06)] p-margin-mobile z-50">
+<div class="max-w-3xl mx-auto">
+<button class="w-full bg-primary hover:bg-surface-tint text-on-primary font-headline-md text-headline-md py-4 rounded-lg shadow-sm transition-colors flex items-center justify-center gap-2">
+<span>Pay ₩45,000</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>
