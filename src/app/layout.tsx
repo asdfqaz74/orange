@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Orange',
-  description: 'Orange Next.js application',
+  title: 'Jeju Damgyul',
+  description: 'Boutique orchard storefront experience for Jeju citrus.',
 };
 
 export default function RootLayout({
@@ -13,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body className="bg-background font-body text-on-background antialiased">
+        {children}
+      </body>
     </html>
   );
 }
