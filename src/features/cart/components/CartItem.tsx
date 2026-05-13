@@ -18,7 +18,7 @@ export function CartItem({ item }: { item: CartItemType }) {
             <h3 className="font-headline text-headline-md text-on-surface">{item.product.name}</h3>
             <p className="mt-1 text-body-sm text-on-surface-variant">{item.product.weight}</p>
           </div>
-          <button className="absolute right-4 top-4 rounded-full p-1 text-outline transition-colors hover:bg-error-container/30 hover:text-error" type="button" aria-label="Remove item">
+          <button className="absolute right-4 top-4 rounded-full p-1 text-outline transition-colors hover:bg-error-container/30 hover:text-error" type="button" aria-label="상품 삭제">
             <Icon name="close" className="text-xl" />
           </button>
         </div>

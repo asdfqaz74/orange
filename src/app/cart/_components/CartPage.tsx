@@ -18,11 +18,11 @@ export function CartPage() {
       <main className="mx-auto max-w-7xl px-margin-mobile py-stack-md pb-32 lg:pb-stack-md">
         <div className="mb-stack-md flex items-end justify-between gap-stack-sm border-b border-surface-variant pb-4">
           <div>
-            <p className="text-label-md uppercase tracking-widest text-secondary">Shopping Cart</p>
-            <h1 className="font-headline text-headline-xl text-on-surface">Your Cart</h1>
+            <p className="text-label-md uppercase tracking-widest text-secondary">장바구니</p>
+            <h1 className="font-headline text-headline-xl text-on-surface">내 장바구니</h1>
           </div>
           <div className="flex items-center gap-base text-right">
-            <span className="text-body-md text-on-surface-variant">{cartItems.length} Items</span>
+            <span className="text-body-md text-on-surface-variant">{cartItems.length} 개 상품</span>
             <Icon name="shopping_cart" className="text-3xl text-primary" />
           </div>
         </div>
@@ -33,9 +33,9 @@ export function CartPage() {
               <CartItem key={item.product.id} item={item} />
             ))}
             <div className="flex flex-wrap gap-3 pt-base">
-              <TrustBadge icon="local_shipping">Free Shipping</TrustBadge>
-              <TrustBadge icon="eco">Eco Packaging</TrustBadge>
-              <TrustBadge icon="local_offer">Seasonal Price</TrustBadge>
+              <TrustBadge icon="local_shipping">무료 배송</TrustBadge>
+              <TrustBadge icon="eco">친환경 포장</TrustBadge>
+              <TrustBadge icon="local_offer">제철 특가</TrustBadge>
             </div>
           </section>
           <div className="lg:col-span-4">
@@ -45,7 +45,7 @@ export function CartPage() {
       </main>
       <StickyActionBar className="lg:hidden">
         <Button href={paths.checkout} className="w-full" size="lg">
-          Order Now - {formatPrice(total)}
+          주문하기 - {formatPrice(total)}
           <Icon name="arrow_forward" />
         </Button>
       </StickyActionBar>

@@ -5,7 +5,7 @@ import { BottomNavBar } from '@/shared/components/common/BottomNavBar';
 import { TopAppBar } from '@/shared/components/common/TopAppBar';
 import { Icon } from '@/shared/components/ui/Icon';
 
-const categories = ['All', 'For Home', 'For Gifts'];
+const categories = ['전체', '가정용', '선물용'];
 
 export function ProductsPage() {
   return (
@@ -13,16 +13,16 @@ export function ProductsPage() {
       <TopAppBar />
       <main className="mx-auto max-w-7xl px-margin-mobile py-stack-lg">
         <section className="mb-stack-lg rounded-xl bg-surface-container-low p-stack-md shadow-card">
-          <p className="mb-base text-label-md uppercase tracking-widest text-secondary">Orchard</p>
+          <p className="mb-base text-label-md uppercase tracking-widest text-secondary">과수원</p>
           <div className="flex flex-col gap-stack-sm md:flex-row md:items-end md:justify-between">
             <div>
-              <h1 className="font-headline text-headline-xl text-on-surface">Fresh Harvest</h1>
+              <h1 className="font-headline text-headline-xl text-on-surface">신선한 수확</h1>
               <p className="mt-base max-w-2xl text-body-md text-on-surface-variant">
-                Browse Jeju citrus selected for home tables, gifts, and seasonal preserves.
+                가정용, 선물용, 제철 저장용으로 선별한 제주 감귤을 만나보세요.
               </p>
             </div>
             <button className="inline-flex w-fit items-center gap-2 rounded-lg border border-outline-variant bg-surface-container-lowest px-4 py-3 text-label-md text-on-surface-variant" type="button">
-              Sort by freshness
+              신선도순 정렬
               <Icon name="arrow_drop_down" />
             </button>
           </div>

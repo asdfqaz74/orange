@@ -30,7 +30,7 @@ export function ProductCard({ product, featured = false, compact = false }: Prod
             'absolute rounded-full bg-inverse-surface/80 px-3 py-2 text-center text-label-sm text-inverse-on-surface',
             compact ? 'inset-x-2 top-2' : 'inset-x-6 top-6',
           )}>
-            Sold Out
+            품절
           </span>
         ) : null}
         <span className={cn(
@@ -60,7 +60,7 @@ export function ProductCard({ product, featured = false, compact = false }: Prod
               disabled={product.soldOut}
               aria-disabled={product.soldOut || undefined}
             >
-              <span className="sr-only">{product.soldOut ? `Notify me about ${product.name}` : `Add ${product.name} to cart`}</span>
+              <span className="sr-only">{product.soldOut ? `${product.name} 입고 알림 받기` : `${product.name} 장바구니에 담기`}</span>
               <Icon name={product.soldOut ? 'notifications' : 'add_shopping_cart'} className="text-xl" />
             </Button>
           </div>
@@ -76,7 +76,7 @@ export function ProductCard({ product, featured = false, compact = false }: Prod
                 aria-disabled={product.soldOut || undefined}
               >
                 <Icon name="shopping_basket" className="text-lg" />
-                {product.soldOut ? 'Notify Me' : 'Add to Cart'}
+                {product.soldOut ? '알림 받기' : '장바구니 담기'}
               </Button>
             </div>
           </>

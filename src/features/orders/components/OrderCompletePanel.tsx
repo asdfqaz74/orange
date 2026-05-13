@@ -9,7 +9,7 @@ export function OrderCompletePanel({ orderId }: { orderId: string }) {
     <main className="relative z-10 mx-auto flex min-h-screen w-full max-w-md flex-col items-center justify-center px-margin-mobile py-stack-lg">
       <div className="relative mb-stack-md h-32 w-32 shrink-0">
         <div className="absolute inset-0 scale-125 rounded-full bg-primary/10 blur-xl" />
-        <img className="relative z-10 h-full w-full rounded-full border-4 border-surface object-cover shadow-[0_8px_30px_rgb(144_77_0_/_0.15)]" src={completeImage} alt="Celebratory Jeju tangerine" />
+        <img className="relative z-10 h-full w-full rounded-full border-4 border-surface object-cover shadow-[0_8px_30px_rgb(144_77_0_/_0.15)]" src={completeImage} alt="주문 완료를 축하하는 제주 감귤" />
         <div className="absolute -bottom-2 -right-2 z-20 flex h-10 w-10 items-center justify-center rounded-full border-4 border-surface bg-primary shadow-sm">
           <Icon name="check" filled className="text-[20px] text-on-primary" />
         </div>
@@ -18,7 +18,7 @@ export function OrderCompletePanel({ orderId }: { orderId: string }) {
       <div className="mb-stack-lg flex w-full flex-col gap-base text-center">
         <h1 className="font-headline text-headline-xl tracking-tight text-on-surface">주문이 정상적으로<br />완료되었습니다!</h1>
         <div className="mt-2 inline-flex items-center justify-center gap-2">
-          <span className="text-label-md uppercase tracking-wider text-on-surface-variant">Order No.</span>
+          <span className="text-label-md uppercase tracking-wider text-on-surface-variant">주문 번호</span>
           <span className="rounded-full bg-primary/5 px-3 py-1 text-body-md font-medium text-primary">{orderId}</span>
         </div>
       </div>
@@ -29,20 +29,20 @@ export function OrderCompletePanel({ orderId }: { orderId: string }) {
           <div className="mb-stack-sm flex h-12 w-12 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container shadow-sm">
             <Icon name="local_shipping" filled />
           </div>
-          <h2 className="mb-2 font-headline text-headline-md text-on-surface">Getting Ready to Ship</h2>
+          <h2 className="mb-2 font-headline text-headline-md text-on-surface">배송 준비 중</h2>
           <p className="text-body-md leading-relaxed text-on-surface-variant">
-            Your fresh Jeju tangerines will be carefully picked, packed, and shipped within <strong className="font-semibold text-on-surface">1-2 business days</strong>.
+            신선한 제주 감귤을 꼼꼼히 수확하고 포장해 <strong className="font-semibold text-on-surface">영업일 기준 1~2일 안에</strong> 발송합니다.
           </p>
         </div>
       </div>
 
       <div className="mt-auto flex w-full flex-col gap-3">
         <Button href={paths.products} className="w-full" size="lg">
-          View Order Status
+          주문 상태 보기
           <Icon name="arrow_forward" className="text-[18px]" />
         </Button>
         <Button href={paths.products} variant="secondary" className="w-full" size="lg">
-          Continue Shopping
+          쇼핑 계속하기
         </Button>
       </div>
     </main>

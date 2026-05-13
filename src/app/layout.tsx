@@ -16,8 +16,8 @@ const body = Be_Vietnam_Pro({
 });
 
 export const metadata: Metadata = {
-  title: 'Jeju Damgyul',
-  description: 'Boutique orchard storefront experience for Jeju citrus.',
+  title: '제주 담귤',
+  description: '제주 감귤을 위한 부티크 과수원 스토어 경험.',
 };
 
 export default function RootLayout({

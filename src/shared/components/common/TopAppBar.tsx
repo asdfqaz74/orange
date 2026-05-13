@@ -12,7 +12,7 @@ type TopAppBarProps = {
 };
 
 export function TopAppBar({
-  title = 'Jeju Damgyul',
+  title = '제주 담귤',
   backHref,
   cartHref = paths.cart,
   compact = false,

@@ -15,7 +15,7 @@ export function ProductGallery({ product, className }: ProductGalleryProps) {
       <div className="hidden grid-cols-3 gap-gutter-mobile md:grid">
         {[product.image, product.image, product.image].map((image, index) => (
           <div key={`${product.id}-${index}`} className="overflow-hidden rounded-lg border border-outline-variant/30 bg-surface-container p-2">
-            <img className="h-28 w-full rounded-md object-cover" src={image} alt={`${product.name} thumbnail ${index + 1}`} />
+            <img className="h-28 w-full rounded-md object-cover" src={image} alt={`${product.name} 썸네일 ${index + 1}`} />
           </div>
         ))}
       </div>

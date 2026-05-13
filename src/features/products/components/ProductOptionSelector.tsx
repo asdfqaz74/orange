@@ -1,13 +1,13 @@
 import { cn } from '@/shared/utils/cn';
 
 const weights = ['3kg', '5kg', '10kg'];
-const uses = ['For Home', 'For Gifts'];
+const uses = ['가정용', '선물용'];
 
 export function ProductOptionSelector() {
   return (
     <div className="space-y-stack-md">
       <div>
-        <p className="mb-base text-label-md text-on-surface">Weight</p>
+        <p className="mb-base text-label-md text-on-surface">중량</p>
         <div className="grid grid-cols-3 gap-base">
           {weights.map((weight, index) => (
             <button
@@ -24,7 +24,7 @@ export function ProductOptionSelector() {
         </div>
       </div>
       <div>
-        <p className="mb-base text-label-md text-on-surface">Use case</p>
+        <p className="mb-base text-label-md text-on-surface">용도</p>
         <div className="flex flex-wrap gap-base">
           {uses.map((use, index) => (
             <button

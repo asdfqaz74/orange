@@ -1,15 +1,15 @@
 import { Icon } from '@/shared/components/ui/Icon';
 
 const reviews = [
-  'The mandarins arrived fragrant, bright, and ready for gifting.',
-  'Packaging felt premium and the fruit was sweeter than expected.',
+  '감귤 향이 싱그럽고 선물하기 좋게 도착했어요.',
+  '포장이 고급스럽고 과일도 기대보다 더 달콤했어요.',
 ];
 
 export function ReviewSummary() {
   return (
     <section className="rounded-xl bg-surface-container-lowest p-stack-md shadow-card">
       <div className="mb-stack-sm flex items-center justify-between">
-        <h3 className="font-headline text-headline-md text-on-surface">Customer Reviews</h3>
+        <h3 className="font-headline text-headline-md text-on-surface">고객 후기</h3>
         <div className="flex items-center gap-1 text-primary">
           {[1, 2, 3, 4, 5].map((star) => (
             <Icon key={star} name="star" filled className="text-lg" />

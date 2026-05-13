@@ -3,9 +3,9 @@ import { Icon } from '@/shared/components/ui/Icon';
 import { cn } from '@/shared/utils/cn';
 
 const methods = [
-  { icon: 'credit_card', label: 'Credit Card', value: 'card' },
-  { icon: 'account_balance', label: 'Bank Transfer', value: 'bank' },
-  { icon: 'tap_and_play', label: 'Simple Pay', value: 'simple' },
+  { icon: 'credit_card', label: '신용카드', value: 'card' },
+  { icon: 'account_balance', label: '무통장 입금', value: 'bank' },
+  { icon: 'tap_and_play', label: '간편 결제', value: 'simple' },
 ];
 
 export function PaymentMethodSelector() {
@@ -13,7 +13,7 @@ export function PaymentMethodSelector() {
     <Card className="p-stack-sm">
       <h2 className="mb-stack-sm flex items-center gap-2 font-headline text-headline-md text-on-surface">
         <Icon name="payment" className="text-primary" />
-        Payment Method
+        결제 수단
       </h2>
       <div className="grid gap-4 md:grid-cols-3">
         {methods.map((method, index) => (

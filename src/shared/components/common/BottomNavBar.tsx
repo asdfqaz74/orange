@@ -4,10 +4,10 @@ import { Icon } from '@/shared/components/ui/Icon';
 import { cn } from '@/shared/utils/cn';
 
 const items = [
-  { href: paths.home, icon: 'home_pin', label: 'Home' },
-  { href: paths.products, icon: 'shopping_basket', label: 'Orchard' },
-  { href: paths.cart, icon: 'shopping_cart', label: 'Cart' },
-  { href: paths.home, icon: 'person', label: 'My' },
+  { href: paths.home, icon: 'home_pin', label: '홈' },
+  { href: paths.products, icon: 'shopping_basket', label: '과수원' },
+  { href: paths.cart, icon: 'shopping_cart', label: '장바구니' },
+  { href: paths.home, icon: 'person', label: '마이' },
 ];
 
 type BottomNavBarProps = {
