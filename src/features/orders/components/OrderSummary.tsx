@@ -26,11 +26,11 @@ export function OrderSummary({ items, total }: { items: CartItem[]; total: numbe
       <div className="space-y-2 pt-stack-sm">
         <div className="flex justify-between text-body-sm text-on-surface-variant">
           <span>Subtotal</span>
-          <span>{formatPrice(total)}</span>
+          <span className="text-on-surface">{formatPrice(total)}</span>
         </div>
         <div className="flex justify-between text-body-sm text-on-surface-variant">
           <span>Shipping</span>
-          <span>Free</span>
+          <span className="text-on-surface">Free</span>
         </div>
         <div className="flex justify-between pt-2 font-headline text-headline-md text-primary">
           <span>Total</span>

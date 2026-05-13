@@ -7,7 +7,7 @@ const items = [
   { href: paths.home, icon: 'home_pin', label: 'Home' },
   { href: paths.products, icon: 'shopping_basket', label: 'Orchard' },
   { href: paths.cart, icon: 'shopping_cart', label: 'Cart' },
-  { href: '#', icon: 'person', label: 'My' },
+  { href: paths.home, icon: 'person', label: 'My' },
 ];
 
 type BottomNavBarProps = {

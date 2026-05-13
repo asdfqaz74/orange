@@ -10,7 +10,7 @@ type BaseProps = {
 type TextFieldProps = BaseProps & InputHTMLAttributes<HTMLInputElement> & { multiline?: false };
 type TextAreaProps = BaseProps & TextareaHTMLAttributes<HTMLTextAreaElement> & { multiline: true };
 
-const fieldClass = 'w-full rounded-lg border border-outline-variant bg-background px-4 py-3 text-body-md text-on-surface transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary';
+const fieldClass = 'w-full rounded-lg border border-outline-variant bg-surface-container-lowest px-4 py-3 text-body-md text-on-surface transition-colors focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary';
 
 export function TextField(props: TextFieldProps | TextAreaProps) {
   const { label, id, className, multiline, ...fieldProps } = props;

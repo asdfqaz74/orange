@@ -23,7 +23,7 @@ export function ProductDetailPage({ product }: { product: Product }) {
                 <Icon name="eco" filled className="text-sm" />
                 Freshly Picked
               </Badge>
-              <h1 className="font-headline text-headline-xl text-on-surface">제주 프리미엄 노지 감귤</h1>
+              <h1 className="font-headline text-headline-xl text-on-surface">{product.name}</h1>
               <p className="mt-base text-body-lg text-on-surface-variant">{product.description}</p>
               <p className="mt-stack-sm font-headline text-3xl text-primary">{formatPrice(product.price)}</p>
             </div>
@@ -62,9 +62,15 @@ export function ProductDetailPage({ product }: { product: Product }) {
         </section>
       </main>
       <StickyActionBar className="md:hidden">
-        <Button href={paths.checkout} className="w-full" size="lg">
-          Buy Now - {formatPrice(product.price)}
-        </Button>
+        <div className="flex gap-base">
+          <Button href={paths.cart} variant="outline" size="lg" className="shrink-0 px-4">
+            <span className="sr-only">Add to cart</span>
+            <Icon name="add_shopping_cart" />
+          </Button>
+          <Button href={paths.checkout} className="w-full" size="lg">
+            Buy Now - {formatPrice(product.price)}
+          </Button>
+        </div>
       </StickyActionBar>
     </div>
   );

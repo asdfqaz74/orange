@@ -36,9 +36,9 @@ export function ProductsPage() {
           ))}
         </div>
 
-        <section className="grid gap-gutter-mobile md:grid-cols-2 xl:grid-cols-4">
+        <section className="grid grid-cols-2 gap-gutter-mobile md:grid-cols-2 xl:grid-cols-4">
           {products.map((product, index) => (
-            <ProductCard key={product.id} product={product} featured={index === 0} />
+            <ProductCard key={product.id} product={product} featured={index === 0} compact />
           ))}
         </section>
       </main>

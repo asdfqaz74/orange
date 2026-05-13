@@ -19,9 +19,9 @@ export function PaymentMethodSelector() {
         {methods.map((method, index) => (
           <label key={method.value} className="relative cursor-pointer">
             <input defaultChecked={index === 0} className="peer sr-only" name="paymentMethod" type="radio" value={method.value} />
-            <div className={cn('flex flex-col items-center justify-center gap-2 rounded-lg border-2 border-surface-variant bg-background p-4 transition-all peer-checked:border-primary peer-checked:bg-primary-fixed')}>
-              <Icon name={method.icon} className="text-on-surface-variant peer-checked:text-primary" />
-              <span className="text-label-md text-on-surface peer-checked:text-primary">{method.label}</span>
+            <div className={cn('flex flex-col items-center justify-center gap-2 rounded-lg border-2 border-surface-variant bg-surface-container-lowest p-4 text-on-surface-variant transition-all peer-checked:border-primary peer-checked:bg-primary-fixed peer-checked:text-primary')}>
+              <Icon name={method.icon} />
+              <span className="text-label-md text-on-surface">{method.label}</span>
             </div>
           </label>
         ))}

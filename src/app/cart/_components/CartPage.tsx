@@ -15,17 +15,20 @@ export function CartPage() {
   return (
     <div className="min-h-screen bg-background pb-28 text-on-background lg:pb-0">
       <TopAppBar backHref={paths.products} />
-      <main className="mx-auto max-w-7xl px-margin-mobile py-stack-lg">
-        <div className="mb-stack-md flex items-center justify-between">
+      <main className="mx-auto max-w-7xl px-margin-mobile py-stack-md pb-32 lg:pb-stack-md">
+        <div className="mb-stack-md flex items-end justify-between gap-stack-sm border-b border-surface-variant pb-4">
           <div>
             <p className="text-label-md uppercase tracking-widest text-secondary">Shopping Cart</p>
             <h1 className="font-headline text-headline-xl text-on-surface">Your Cart</h1>
           </div>
-          <Icon name="shopping_cart" className="text-3xl text-primary" />
+          <div className="flex items-center gap-base text-right">
+            <span className="text-body-md text-on-surface-variant">{cartItems.length} Items</span>
+            <Icon name="shopping_cart" className="text-3xl text-primary" />
+          </div>
         </div>
 
-        <div className="grid gap-stack-lg lg:grid-cols-[1fr_360px]">
-          <section className="space-y-gutter-mobile">
+        <div className="grid items-start gap-stack-lg lg:grid-cols-12 lg:gap-8">
+          <section className="space-y-gutter-mobile lg:col-span-8">
             {cartItems.map((item) => (
               <CartItem key={item.product.id} item={item} />
             ))}
@@ -35,7 +38,9 @@ export function CartPage() {
               <TrustBadge icon="local_offer">Seasonal Price</TrustBadge>
             </div>
           </section>
-          <CartSummary items={cartItems} />
+          <div className="lg:col-span-4">
+            <CartSummary items={cartItems} />
+          </div>
         </div>
       </main>
       <StickyActionBar className="lg:hidden">

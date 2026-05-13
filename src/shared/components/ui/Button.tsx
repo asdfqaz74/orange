@@ -35,7 +35,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const classes = cn(
-    'inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors duration-200 active:scale-[0.99]',
+    'inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary active:scale-[0.99]',
     variantClasses[variant],
     sizeClasses[size],
     className,
@@ -43,7 +43,7 @@ export function Button({
 
   if (href) {
     return (
-      <Link className={classes} href={href}>
+      <Link className={classes} href={href} aria-label={props['aria-label']}>
         {children}
       </Link>
     );
