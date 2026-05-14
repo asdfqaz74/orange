@@ -1,13 +1,13 @@
 import { CartItem } from '@/features/cart/components/CartItem';
-import { CartSummary, getCartTotal } from '@/features/cart/components/CartSummary';
 import { cartItems } from '@/features/cart/constants/cartItems';
+import { CartSummary, getCartTotal } from '@/features/cart/components/CartSummary';
 import { paths } from '@/routes/paths';
-import { TopAppBar } from '@/shared/components/common/TopAppBar';
-import { StickyActionBar } from '@/shared/components/common/StickyActionBar';
-import { TrustBadge } from '@/shared/components/common/TrustBadge';
-import { Button } from '@/shared/components/ui/Button';
 import { Icon } from '@/shared/components/ui/Icon';
 import { formatPrice } from '@/shared/utils/format';
+import { Button } from '@/shared/components/ui/Button';
+import { TopAppBar } from '@/shared/components/common/TopAppBar';
+import { TrustBadge } from '@/shared/components/common/TrustBadge';
+import { StickyActionBar } from '@/shared/components/common/StickyActionBar';
 
 export function CartPage() {
   const total = getCartTotal(cartItems);

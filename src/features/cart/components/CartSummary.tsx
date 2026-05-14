@@ -1,8 +1,8 @@
 import type { CartItem } from '@/features/cart/types/cart';
 import { paths } from '@/routes/paths';
-import { Button } from '@/shared/components/ui/Button';
 import { Icon } from '@/shared/components/ui/Icon';
 import { formatPrice } from '@/shared/utils/format';
+import { Button } from '@/shared/components/ui/Button';
 
 export function getCartTotal(items: CartItem[]) {
   return items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);

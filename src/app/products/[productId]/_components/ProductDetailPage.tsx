@@ -1,14 +1,14 @@
+import type { Product } from '@/features/products/types/product';
+import { ReviewSummary } from '@/features/products/components/ReviewSummary';
 import { ProductGallery } from '@/features/products/components/ProductGallery';
 import { ProductOptionSelector } from '@/features/products/components/ProductOptionSelector';
-import { ReviewSummary } from '@/features/products/components/ReviewSummary';
-import type { Product } from '@/features/products/types/product';
 import { paths } from '@/routes/paths';
-import { TopAppBar } from '@/shared/components/common/TopAppBar';
-import { StickyActionBar } from '@/shared/components/common/StickyActionBar';
-import { Badge } from '@/shared/components/ui/Badge';
-import { Button } from '@/shared/components/ui/Button';
 import { Icon } from '@/shared/components/ui/Icon';
 import { formatPrice } from '@/shared/utils/format';
+import { Badge } from '@/shared/components/ui/Badge';
+import { Button } from '@/shared/components/ui/Button';
+import { TopAppBar } from '@/shared/components/common/TopAppBar';
+import { StickyActionBar } from '@/shared/components/common/StickyActionBar';
 
 export function ProductDetailPage({ product }: { product: Product }) {
   return (

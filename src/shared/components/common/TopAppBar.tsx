@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { paths } from '@/routes/paths';
 import { cn } from '@/shared/utils/cn';
 import { Icon } from '@/shared/components/ui/Icon';

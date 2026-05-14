@@ -1,5 +1,5 @@
-import { Icon } from '@/shared/components/ui/Icon';
 import { cn } from '@/shared/utils/cn';
+import { Icon } from '@/shared/components/ui/Icon';
 
 type TrustBadgeProps = {
   icon: string;

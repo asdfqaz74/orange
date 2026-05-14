@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { Icon } from '@/shared/components/ui/Icon';
 
 type SectionHeaderProps = {

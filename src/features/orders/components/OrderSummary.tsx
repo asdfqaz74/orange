@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import type { CartItem } from '@/features/cart/types/cart';
 import { Card } from '@/shared/components/ui/Card';
 import { Icon } from '@/shared/components/ui/Icon';
@@ -12,7 +14,15 @@ export function OrderSummary({ items, total }: { items: CartItem[]; total: numbe
       </h2>
       {items.map((item) => (
         <div key={item.product.id} className="flex items-center gap-4 border-b border-surface-variant py-stack-sm last:border-b-0">
-          <img className="h-20 w-20 rounded-lg object-cover" src={item.product.image} alt={item.product.imageAlt} />
+          <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg">
+            <Image
+              className="object-cover"
+              src={item.product.image}
+              alt={item.product.imageAlt}
+              fill
+              sizes="80px"
+            />
+          </div>
           <div className="flex-1">
             <h3 className="text-label-md text-on-surface">{item.product.name}</h3>
             <p className="text-body-sm text-on-surface-variant">{item.product.weight}</p>

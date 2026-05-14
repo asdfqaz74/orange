@@ -1,13 +1,15 @@
+import Image from 'next/image';
+
 import { ProductCard } from '@/features/products/components/ProductCard';
-import { orchardHeroImage, orchardStoryImage, products } from '@/features/products/constants/products';
+import { products, orchardHeroImage, orchardStoryImage } from '@/features/products/constants/products';
 import { paths } from '@/routes/paths';
-import { BottomNavBar } from '@/shared/components/common/BottomNavBar';
-import { SectionHeader } from '@/shared/components/common/SectionHeader';
-import { TopAppBar } from '@/shared/components/common/TopAppBar';
-import { TrustBadge } from '@/shared/components/common/TrustBadge';
+import { Icon } from '@/shared/components/ui/Icon';
 import { Badge } from '@/shared/components/ui/Badge';
 import { Button } from '@/shared/components/ui/Button';
-import { Icon } from '@/shared/components/ui/Icon';
+import { TopAppBar } from '@/shared/components/common/TopAppBar';
+import { TrustBadge } from '@/shared/components/common/TrustBadge';
+import { BottomNavBar } from '@/shared/components/common/BottomNavBar';
+import { SectionHeader } from '@/shared/components/common/SectionHeader';
 
 const harvestSteps = ['아침 수확', '꼼꼼한 선별', '산지 직송'];
 
@@ -18,7 +20,14 @@ export function HomePage() {
       <main>
         <section className="mx-auto mt-stack-md max-w-7xl px-margin-mobile">
           <div className="relative min-h-[400px] overflow-hidden rounded-xl shadow-[0_8px_30px_rgb(144_77_0_/_0.1)] md:h-[530px]">
-            <img className="absolute inset-0 h-full w-full object-cover" src={orchardHeroImage} alt="햇살이 가득한 제주 감귤 과수원" />
+            <Image
+              className="object-cover"
+              src={orchardHeroImage}
+              alt="햇살이 가득한 제주 감귤 과수원"
+              fill
+              preload
+              sizes="(max-width: 768px) calc(100vw - 40px), 1280px"
+            />
             <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-on-secondary-fixed/90 via-on-secondary-fixed/40 to-transparent p-8 md:p-12">
               <Badge variant="primary" className="mb-4">싱싱한 제철 수확</Badge>
               <h1 className="mb-4 max-w-lg font-headline text-headline-xl leading-tight text-on-primary md:text-5xl">
@@ -78,7 +87,15 @@ export function HomePage() {
               </div>
             </div>
             <div className="lg:w-1/2">
-              <img className="h-[420px] w-full rounded-xl object-cover shadow-card" src={orchardStoryImage} alt="잘 익은 제주 감귤을 따는 농부" />
+              <div className="relative h-[420px] w-full overflow-hidden rounded-xl shadow-card">
+                <Image
+                  className="object-cover"
+                  src={orchardStoryImage}
+                  alt="잘 익은 제주 감귤을 따는 농부"
+                  fill
+                  sizes="(max-width: 1024px) calc(100vw - 40px), 640px"
+                />
+              </div>
             </div>
           </div>
         </section>

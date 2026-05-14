@@ -1,5 +1,5 @@
-import { Button } from '@/shared/components/ui/Button';
 import { Icon } from '@/shared/components/ui/Icon';
+import { Button } from '@/shared/components/ui/Button';
 
 type EmptyStateProps = {
   icon: string;

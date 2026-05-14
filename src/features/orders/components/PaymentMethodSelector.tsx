@@ -1,6 +1,6 @@
+import { cn } from '@/shared/utils/cn';
 import { Card } from '@/shared/components/ui/Card';
 import { Icon } from '@/shared/components/ui/Icon';
-import { cn } from '@/shared/utils/cn';
 
 const methods = [
   { icon: 'credit_card', label: '신용카드', value: 'card' },

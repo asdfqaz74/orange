@@ -1,4 +1,5 @@
-import { getProduct, products } from '@/features/products/constants/products';
+import { products, getProduct } from '@/features/products/constants/products';
+
 import { ProductDetailPage } from './_components/ProductDetailPage';
 
 type ProductDetailRouteProps = {

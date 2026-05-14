@@ -1,9 +1,9 @@
-import { ProductCard } from '@/features/products/components/ProductCard';
 import { products } from '@/features/products/constants/products';
+import { ProductCard } from '@/features/products/components/ProductCard';
 import { paths } from '@/routes/paths';
-import { BottomNavBar } from '@/shared/components/common/BottomNavBar';
-import { TopAppBar } from '@/shared/components/common/TopAppBar';
 import { Icon } from '@/shared/components/ui/Icon';
+import { TopAppBar } from '@/shared/components/common/TopAppBar';
+import { BottomNavBar } from '@/shared/components/common/BottomNavBar';
 
 const categories = ['전체', '가정용', '선물용'];
 

@@ -1,7 +1,8 @@
 import Link from 'next/link';
+
 import { paths } from '@/routes/paths';
-import { Icon } from '@/shared/components/ui/Icon';
 import { cn } from '@/shared/utils/cn';
+import { Icon } from '@/shared/components/ui/Icon';
 
 const items = [
   { href: paths.home, icon: 'home_pin', label: '홈' },

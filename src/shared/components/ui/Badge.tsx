@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+
 import { cn } from '@/shared/utils/cn';
 
 type BadgeVariant = 'primary' | 'secondary' | 'surface';

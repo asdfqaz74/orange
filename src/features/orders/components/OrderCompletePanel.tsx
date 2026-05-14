@@ -1,6 +1,8 @@
+import Image from 'next/image';
+
 import { paths } from '@/routes/paths';
-import { Button } from '@/shared/components/ui/Button';
 import { Icon } from '@/shared/components/ui/Icon';
+import { Button } from '@/shared/components/ui/Button';
 
 const completeImage = 'https://lh3.googleusercontent.com/aida-public/AB6AXuCOYMT_NZ8jRTV__iVt6sudWczYal5EdbFJfrM-iTTi-ChijtQ1N0OksNhoqglcAAuqYRTQ67MpAp-5VcQd_X10x9qhaj2KE5YN6UV_CqxxLCF4K-21n3-I2wCBV2-MGo9DqbzB-dmLnCiQjKMBBLQ5CElCYw4165snjdp6IVgkMOJWH8zr2WcFNzSi1szEdrCIjZe-20m7JjMU70t8xBwPikRTGC_3dDL3nIsti6JO6-U8qcF9eOI2BTXRaduJXOcouqFLFsFPIenh';
 
@@ -9,7 +11,13 @@ export function OrderCompletePanel({ orderId }: { orderId: string }) {
     <main className="relative z-10 mx-auto flex min-h-screen w-full max-w-md flex-col items-center justify-center px-margin-mobile py-stack-lg">
       <div className="relative mb-stack-md h-32 w-32 shrink-0">
         <div className="absolute inset-0 scale-125 rounded-full bg-primary/10 blur-xl" />
-        <img className="relative z-10 h-full w-full rounded-full border-4 border-surface object-cover shadow-[0_8px_30px_rgb(144_77_0_/_0.15)]" src={completeImage} alt="주문 완료를 축하하는 제주 감귤" />
+        <Image
+          className="z-10 rounded-full border-4 border-surface object-cover shadow-[0_8px_30px_rgb(144_77_0_/_0.15)]"
+          src={completeImage}
+          alt="주문 완료를 축하하는 제주 감귤"
+          fill
+          sizes="128px"
+        />
         <div className="absolute -bottom-2 -right-2 z-20 flex h-10 w-10 items-center justify-center rounded-full border-4 border-surface bg-primary shadow-sm">
           <Icon name="check" filled className="text-[20px] text-on-primary" />
         </div>

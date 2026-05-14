@@ -1,13 +1,13 @@
+import { order } from '@/features/orders/constants/order';
 import { CheckoutForm } from '@/features/orders/components/CheckoutForm';
 import { OrderSummary } from '@/features/orders/components/OrderSummary';
 import { PaymentMethodSelector } from '@/features/orders/components/PaymentMethodSelector';
-import { order } from '@/features/orders/constants/order';
 import { paths } from '@/routes/paths';
-import { TopAppBar } from '@/shared/components/common/TopAppBar';
-import { StickyActionBar } from '@/shared/components/common/StickyActionBar';
-import { Button } from '@/shared/components/ui/Button';
 import { Icon } from '@/shared/components/ui/Icon';
 import { formatPrice } from '@/shared/utils/format';
+import { Button } from '@/shared/components/ui/Button';
+import { TopAppBar } from '@/shared/components/common/TopAppBar';
+import { StickyActionBar } from '@/shared/components/common/StickyActionBar';
 
 export function CheckoutPage() {
   return (

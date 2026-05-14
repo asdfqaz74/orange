@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import type { ReactNode, ButtonHTMLAttributes } from 'react';
+
 import { cn } from '@/shared/utils/cn';
 
 type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';

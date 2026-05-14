@@ -1,10 +1,12 @@
 import Link from 'next/link';
+import Image from 'next/image';
+
 import type { Product } from '@/features/products/types/product';
 import { paths } from '@/routes/paths';
-import { Button } from '@/shared/components/ui/Button';
+import { cn } from '@/shared/utils/cn';
 import { Icon } from '@/shared/components/ui/Icon';
 import { formatPrice } from '@/shared/utils/format';
-import { cn } from '@/shared/utils/cn';
+import { Button } from '@/shared/components/ui/Button';
 
 type ProductCardProps = {
   product: Product;
@@ -16,7 +18,15 @@ export function ProductCard({ product, featured = false, compact = false }: Prod
   return (
     <article className="group flex flex-col overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container-lowest shadow-card transition-transform duration-300 hover:-translate-y-1">
       <Link className={cn('relative block overflow-hidden bg-surface-variant', compact ? 'h-48 p-2 md:h-56 md:p-3' : 'h-64 p-4')} href={paths.productDetail(product.id)}>
-        <img className="h-full w-full rounded-md object-cover transition-transform duration-700 group-hover:scale-105" src={product.image} alt={product.imageAlt} />
+        <span className="relative block h-full w-full">
+          <Image
+            className="rounded-md object-cover transition-transform duration-700 group-hover:scale-105"
+            src={product.image}
+            alt={product.imageAlt}
+            fill
+            sizes={compact ? '(max-width: 768px) 50vw, (max-width: 1280px) 50vw, 25vw' : '(max-width: 768px) calc(100vw - 40px), 50vw'}
+          />
+        </span>
         {product.badge ? (
           <span className={cn(
             'absolute rounded-full bg-primary text-label-sm text-on-primary shadow-sm',

@@ -1,5 +1,5 @@
-import { OrderCompletePanel } from '@/features/orders/components/OrderCompletePanel';
 import { order } from '@/features/orders/constants/order';
+import { OrderCompletePanel } from '@/features/orders/components/OrderCompletePanel';
 
 export function OrderCompletePage() {
   return (

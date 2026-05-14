@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import type { CartItem as CartItemType } from '@/features/cart/types/cart';
 import { QuantityStepper } from '@/features/cart/components/QuantityStepper';
 import { Icon } from '@/shared/components/ui/Icon';
@@ -5,8 +7,16 @@ import { formatPrice } from '@/shared/utils/format';
 
 export function CartItem({ item }: { item: CartItemType }) {
   return (
-    <article className="flex flex-col gap-gutter-mobile rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-stack-sm shadow-card sm:flex-row">
-      <img className="h-36 w-full shrink-0 rounded-lg object-cover sm:h-28 sm:w-28" src={item.product.image} alt={item.product.imageAlt} />
+    <article className="relative flex flex-col gap-gutter-mobile rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-stack-sm shadow-card sm:flex-row">
+      <div className="relative h-36 w-full shrink-0 overflow-hidden rounded-lg sm:h-28 sm:w-28">
+        <Image
+          className="object-cover"
+          src={item.product.image}
+          alt={item.product.imageAlt}
+          fill
+          sizes="(max-width: 640px) calc(100vw - 72px), 112px"
+        />
+      </div>
       <div className="min-w-0 flex-1">
         <div className="flex items-start justify-between gap-base">
           <div className="pr-8">
