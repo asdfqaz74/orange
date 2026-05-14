@@ -21,7 +21,7 @@ const body = Be_Vietnam_Pro({
 const materialSymbols = localFont({
   src: './styles/fonts/material-symbols-outlined.woff2',
   variable: '--font-material-symbols',
-  display: 'swap',
+  display: 'block',
 });
 
 export const metadata: Metadata = {
