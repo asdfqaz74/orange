@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
@@ -31,6 +33,10 @@
     "@types/node": "^25.7.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.6",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-perfectionist": "^5.9.0",
     "tailwindcss": "^4.3.0",
     "typescript": "^6.0.3"
   }
